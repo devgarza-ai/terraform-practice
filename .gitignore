@@ -1,0 +1,30 @@
+# Terraform working data and machine-specific caches
+**/.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+tfplan
+crash.log
+crash.*.log
+.terraformrc
+terraform.rc
+
+# Local credentials, private material, and environment configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.tfvars
+*.tfvars.json
+*.tfbackend
+!*.tfvars.example
+!*.tfbackend.example
+
+# Local tooling
+__pycache__/
+*.pyc
+.venv/
+.DS_Store
+
+# Commit each root's .terraform.lock.hcl: it records provider selections.

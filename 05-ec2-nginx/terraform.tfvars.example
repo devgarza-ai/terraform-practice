@@ -1,0 +1,2 @@
+# Replace this placeholder with a verified Ubuntu x86_64 AMI in us-east-1.
+ami_id = "ami-REPLACE_WITH_VERIFIED_UBUNTU_AMI"

@@ -1,0 +1,5 @@
+* text=auto eol=lf
+*.tf text eol=lf
+*.tfbackend.example text eol=lf
+*.md text eol=lf
+*.html text eol=lf

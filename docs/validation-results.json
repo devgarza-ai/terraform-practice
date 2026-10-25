@@ -1,0 +1,30 @@
+{
+  "terraform_version": "1.17.0",
+  "scope": "configuration-only",
+  "formatting": "passed",
+  "provider_archives": "official registry and archive SHA-256 verified",
+  "provider_validation": "pending GitHub Actions run",
+  "aws_plan_apply_destroy_executed": false,
+  "roots": [
+    {
+      "path": "01-vpc-foundations",
+      "valid": null
+    },
+    {
+      "path": "03-first-s3-project",
+      "valid": null
+    },
+    {
+      "path": "04-s3-backend",
+      "valid": null
+    },
+    {
+      "path": "05-ec2-nginx",
+      "valid": null
+    },
+    {
+      "path": "06-s3-static-website",
+      "valid": null
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+# Copy this file without the .example suffix and supply your existing private state bucket.
+bucket       = "REPLACE_WITH_EXISTING_STATE_BUCKET"
+key          = "04-backends/dev/state.tfstate"
+region       = "us-east-1"
+encrypt      = true
+use_lockfile = true

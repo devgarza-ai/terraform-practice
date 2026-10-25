@@ -1,0 +1,46 @@
+{
+  "exercises": [
+    {
+      "id": "01",
+      "path": "01-vpc-foundations",
+      "title": "VPC foundations",
+      "runnable": true,
+      "focus": "VPC, two subnets, internet gateway, routing, implicit dependencies"
+    },
+    {
+      "id": "02",
+      "path": "02-hcl-building-blocks",
+      "title": "HCL building blocks",
+      "runnable": false,
+      "focus": "Resource, data, variable, local, output, and module syntax reference"
+    },
+    {
+      "id": "03",
+      "path": "03-first-s3-project",
+      "title": "First S3 project",
+      "runnable": true,
+      "focus": "AWS/random providers, state-retained suffix, S3 resource, output"
+    },
+    {
+      "id": "04",
+      "path": "04-s3-backend",
+      "title": "S3 remote state",
+      "runnable": true,
+      "focus": "Partial backend configuration, dev/prod state paths, native S3 locking"
+    },
+    {
+      "id": "05",
+      "path": "05-ec2-nginx",
+      "title": "EC2 and NGINX",
+      "runnable": true,
+      "focus": "Public subnet, explicit bootstrap dependencies, EC2, security groups, user data"
+    },
+    {
+      "id": "06",
+      "path": "06-s3-static-website",
+      "title": "S3 static website",
+      "runnable": true,
+      "focus": "Website configuration, scoped public reads, object uploads, file hashes"
+    }
+  ]
+}
