@@ -17,7 +17,7 @@ The network recording shows `Apply complete! Resources: 3 added, 0 changed, 0 de
 
 ## Configuration checks
 
-[validation-results.json](validation-results.json) records the Terraform validation results for the five runnable roots. Formatting uses Terraform 1.17.0. Provider-schema validation is run on GitHub Actions with backend-free initialization. Provider lock files record selected versions, verified archive checksums, and the canonical Linux package hash. A local provider-installation problem left incomplete files in this preparation environment, so successful local schema validation is not claimed.
+[validation-results.json](validation-results.json) records the Terraform validation results for the five runnable roots. Formatting uses Terraform 1.17.0. Provider-schema validation passed on GitHub Actions with backend-free initialization. Provider lock files record selected versions, verified archive checksums, and the canonical Linux package hash. The schema results below come from GitHub Actions; local checks covered formatting and repository publication inputs.
 
 The checks cover:
 
@@ -30,7 +30,7 @@ The non-runnable HCL reference is formatted as HCL but is not counted as a valid
 
 ## Checks performed by GitHub Actions
 
-The [workflow](../.github/workflows/terraform-checks.yml) runs the repository check and each root's formatting, backend-free initialization, and validation on pushes and pull requests. Its current result is visible in the repository's Actions tab.
+The [workflow](../.github/workflows/terraform-checks.yml) runs the repository check and each root's formatting, backend-free initialization, and validation on pushes and pull requests. [Run 1](https://github.com/devgarza-ai/terraform-practice/actions/runs/40229755087) passed all six jobs against [the published configuration](https://github.com/devgarza-ai/terraform-practice/commit/ee6c5bce7889f9b7e4530238bbf4a9c5d000fbde): the repository check and all five runnable Terraform roots. The machine-readable ledger records that exact checked commit; later workflow results are available in the Actions tab.
 
 The workflow uses read-only repository permissions, immutable action references, and no AWS secrets. A green result demonstrates configuration checks, not a new AWS deployment.
 

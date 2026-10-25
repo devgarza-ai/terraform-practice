@@ -3,28 +3,36 @@
   "scope": "configuration-only",
   "formatting": "passed",
   "provider_archives": "official registry and archive SHA-256 verified",
-  "provider_validation": "pending GitHub Actions run",
+  "provider_validation": "passed in GitHub Actions",
   "aws_plan_apply_destroy_executed": false,
   "roots": [
     {
       "path": "01-vpc-foundations",
-      "valid": null
+      "valid": true
     },
     {
       "path": "03-first-s3-project",
-      "valid": null
+      "valid": true
     },
     {
       "path": "04-s3-backend",
-      "valid": null
+      "valid": true
     },
     {
       "path": "05-ec2-nginx",
-      "valid": null
+      "valid": true
     },
     {
       "path": "06-s3-static-website",
-      "valid": null
+      "valid": true
     }
-  ]
+  ],
+  "repository_checks": "passed in GitHub Actions",
+  "evidence": {
+    "workflow_run_id": 40229755087,
+    "workflow_run_url": "https://github.com/devgarza-ai/terraform-practice/actions/runs/40229755087",
+    "checked_commit": "ee6c5bce7889f9b7e4530238bbf4a9c5d000fbde",
+    "conclusion": "success",
+    "successful_jobs": 6
+  }
 }
