@@ -18,7 +18,7 @@ The network recording shows `Apply complete! Resources: 3 added, 0 changed, 0 de
 
 ## Configuration checks
 
-[validation-results.json](validation-results.json) records configuration-check results and their exact checked commit. The workflow now includes six runnable roots. The first five roots have recorded successful GitHub Actions validation; Exercise 07 is pending its first workflow result. Formatting uses Terraform 1.17.0. Provider lock files record selected versions, verified archive checksums, and the canonical Linux package hash. Schema results come from GitHub Actions; local checks cover formatting and repository publication inputs.
+[validation-results.json](validation-results.json) records successful configuration checks for all six runnable roots and their exact checked commit. Formatting uses Terraform 1.17.0. Provider lock files record selected versions, verified archive checksums, and the canonical Linux package hash. Schema results come from GitHub Actions; local checks cover formatting and repository publication inputs.
 
 The checks cover:
 
@@ -31,7 +31,7 @@ The non-runnable HCL reference is formatted as HCL but is not counted as a valid
 
 ## Checks performed by GitHub Actions
 
-The [workflow](../.github/workflows/terraform-checks.yml) runs the repository check and each root's formatting, backend-free initialization, and validation on pushes and pull requests. The initial [Run 1](https://github.com/devgarza-ai/terraform-practice/actions/runs/40229755087) passed all six jobs against [the original published configuration](https://github.com/devgarza-ai/terraform-practice/commit/ee6c5bce7889f9b7e4530238bbf4a9c5d000fbde): the repository check and the first five runnable Terraform roots. The expanded workflow also checks Exercise 07; its new validation result will be added after the run completes.
+The [workflow](../.github/workflows/terraform-checks.yml) runs the repository check and each root's formatting, backend-free initialization, and validation on pushes and pull requests. The initial [Run 1](https://github.com/devgarza-ai/terraform-practice/actions/runs/40229755087) passed all six jobs against [the original published configuration](https://github.com/devgarza-ai/terraform-practice/commit/ee6c5bce7889f9b7e4530238bbf4a9c5d000fbde): the repository check and the first five runnable Terraform roots. The expanded [data-source validation run](https://github.com/devgarza-ai/terraform-practice/actions/runs/40271008627) passed all seven jobs against [the six-root configuration](https://github.com/devgarza-ai/terraform-practice/commit/ede14a1aedf32832b0a0b988da516dc2ac5a8d40), including Exercise 07. The machine-readable ledger preserves the original evidence and records this newer checked commit. Later workflow results are available in the Actions tab.
 
 The workflow uses read-only repository permissions, immutable action references, and no AWS secrets. A green result demonstrates configuration checks, not a new AWS deployment.
 
