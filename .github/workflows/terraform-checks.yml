@@ -42,6 +42,7 @@ jobs:
           - 04-s3-backend
           - 05-ec2-nginx
           - 06-s3-static-website
+          - 07-data-sources
     defaults:
       run:
         working-directory: ${{ matrix.exercise }}

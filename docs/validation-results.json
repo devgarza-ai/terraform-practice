@@ -3,7 +3,7 @@
   "scope": "configuration-only",
   "formatting": "passed",
   "provider_archives": "official registry and archive SHA-256 verified",
-  "provider_validation": "passed in GitHub Actions",
+  "provider_validation": "passed for the first five roots; Exercise 07 pending GitHub Actions",
   "aws_plan_apply_destroy_executed": false,
   "roots": [
     {
@@ -25,6 +25,10 @@
     {
       "path": "06-s3-static-website",
       "valid": true
+    },
+    {
+      "path": "07-data-sources",
+      "valid": null
     }
   ],
   "repository_checks": "passed in GitHub Actions",
@@ -34,5 +38,8 @@
     "checked_commit": "ee6c5bce7889f9b7e4530238bbf4a9c5d000fbde",
     "conclusion": "success",
     "successful_jobs": 6
-  }
+  },
+  "pending_roots": [
+    "07-data-sources"
+  ]
 }

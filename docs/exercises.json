@@ -41,6 +41,13 @@
       "title": "S3 static website",
       "runnable": true,
       "focus": "Website configuration, scoped public reads, object uploads, file hashes"
+    },
+    {
+      "id": "07",
+      "path": "07-data-sources",
+      "title": "AWS data sources",
+      "runnable": true,
+      "focus": "Regional AMI discovery, caller/Region/AZ context, existing VPC lookup, generated policy JSON"
     }
   ]
 }

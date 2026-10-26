@@ -1,6 +1,6 @@
 # Source Map
 
-The explicit upload batches supply seventeen source files. Filenames with numeric suffixes are normalized within the appropriate exercise folder. Their source hashes identify the supplied bytes before repository formatting and the documented edits.
+The explicit upload batches supply nineteen source files. Filenames with numeric suffixes are normalized within the appropriate exercise folder. Their source hashes identify the supplied bytes before repository formatting and the documented edits.
 
 | Uploaded file | Repository destination / treatment | Original SHA-256 |
 | --- | --- | --- |
@@ -21,6 +21,8 @@ The explicit upload batches supply seventeen source files. Filenames with numeri
 | `outputs.tf` | 06-s3-static-website/outputs.tf | `590537540757308ab10b87b945468a0f97406de843088768c63d9d862d9e86db` |
 | `index.html` | 06-s3-static-website/build/index.html | `72872c959dd623a7f0ef73877a73582f48a6c43126ee21b25d8567b9f76afce2` |
 | `error.html` | 06-s3-static-website/build/error.html | `4c0cf3a8ca52de86672bb10c69f418836762503d211cbb49121ab63a8ae97095` |
+| `provider(3).tf` | 07-data-sources/providers.tf | `6250a0d2059eab77eadc9c44e297026cf2be22748244860c77a142172c7ada3d` |
+| `compute(2).tf` | 07-data-sources/data.tf, compute.tf, s3.tf, and outputs.tf; scoped policy and reusable-lab changes documented | `a27f83fd4e472d73eff51b488a4fc7d2211effed36bd7b0bd0c4b835079439e0` |
 
 The HCL overview and first runnable S3 project remain separate: one demonstrates block syntax with unresolved placeholders, while the other creates a randomly named bucket. The provider snapshot that repeats the first-S3 resources was consolidated instead of publishing duplicate resource definitions.
 

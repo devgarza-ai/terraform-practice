@@ -4,7 +4,7 @@
 
 [![Terraform checks](https://github.com/devgarza-ai/terraform-practice/actions/workflows/terraform-checks.yml/badge.svg)](https://github.com/devgarza-ai/terraform-practice/actions/workflows/terraform-checks.yml)
 
-A documented collection of Terraform course exercises covering AWS networking, S3, remote state, EC2 bootstrapping, and static website hosting. Each runnable exercise is an independent Terraform root with a focused learning objective and its own provider lock file.
+A documented collection of Terraform course exercises covering AWS networking, S3, remote state, EC2 bootstrapping, static website hosting, and data-source lookups. Each runnable exercise is an independent Terraform root with a focused learning objective and its own provider lock file.
 
 [Exercise guide](#exercise-guide) · [Workflow](docs/workflow.md) · [Verification](docs/verification.md) · [Review notes](docs/review-notes.md) · [Attribution](ATTRIBUTION.md)
 
@@ -18,12 +18,13 @@ A documented collection of Terraform course exercises covering AWS networking, S
 | **04 · S3 remote state** | Partial configuration, separate state keys, encryption, and native locking | [Open exercise](04-s3-backend/README.md) |
 | **05 · EC2 and NGINX** | A public web-server lab, shared tags, security rules, and bootstrapping | [Open exercise](05-ec2-nginx/README.md) |
 | **06 · S3 static website** | Bucket policy, website documents, HTML uploads, and change detection | [Open exercise](06-s3-static-website/README.md) |
+| **07 · AWS data sources** | Regional AMI discovery, account/Region/AZ context, tagged VPC lookup, and policy JSON generation | [Open exercise](07-data-sources/README.md) |
 
 ## How the repository is organized
 
 Each numbered folder has one purpose. Run Terraform from the exercise folder you intend to manage. The top-level directory is a repository index, not a deployable root.
 
-The HCL reference keeps its `.tf.example` extension because its external bucket and child module were placeholders in the supplied exercise. All five runnable roots are checked by the validation workflow.
+The HCL reference keeps its `.tf.example` extension because its external bucket and child module were placeholders in the supplied exercise. All six runnable roots are checked by the validation workflow.
 
 ## Work locally
 
