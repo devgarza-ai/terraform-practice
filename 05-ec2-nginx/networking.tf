@@ -1,4 +1,4 @@
-# This file defines the networking resources for the 06-resources project.
+# This file defines the networking resources for the 05-ec2-nginx project.
 # Includes a VPC, public subnet, internet gateway, and route table for routing traffic to the internet.
 
 locals {
