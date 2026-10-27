@@ -43,6 +43,7 @@ jobs:
           - 05-ec2-nginx
           - 06-s3-static-website
           - 07-data-sources
+          - 08-input-vars-local-outputs
     defaults:
       run:
         working-directory: ${{ matrix.exercise }}
@@ -57,8 +58,11 @@ jobs:
           terraform_version: 1.17.0
           terraform_wrapper: false
       - name: Check formatting
-        run: terraform fmt -check -diff
+        run: terraform fmt -check -diff -recursive
       - name: Initialize without the backend
         run: terraform init -backend=false -input=false -lockfile=readonly
       - name: Validate configuration
         run: terraform validate -no-color
+      - name: Test input-variable behavior without AWS
+        if: matrix.exercise == '08-input-vars-local-outputs'
+        run: terraform test -no-color

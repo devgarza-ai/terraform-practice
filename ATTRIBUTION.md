@@ -23,3 +23,5 @@ Repository preparation and validation automation were developed with AI assistan
 - [AWS provider IAM policy document](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_policy_document)
 - [S3 website endpoints](https://docs.aws.amazon.com/AmazonS3/latest/userguide/WebsiteEndpoints.html)
 - [S3 Block Public Access](https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-control-block-public-access.html)
+
+Input-variable guardrail tests were added during repository preparation. They are maintainer-authored checks of the supplied practice configuration, not independently authored learner test results.

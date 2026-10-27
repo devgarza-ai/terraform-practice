@@ -3,7 +3,7 @@
   "scope": "configuration-only",
   "formatting": "passed",
   "provider_archives": "official registry and archive SHA-256 verified",
-  "provider_validation": "passed in GitHub Actions",
+  "provider_validation": "existing roots passed; Exercise 08 pending GitHub Actions",
   "aws_plan_apply_destroy_executed": false,
   "roots": [
     {
@@ -29,6 +29,10 @@
     {
       "path": "07-data-sources",
       "valid": true
+    },
+    {
+      "path": "08-input-vars-local-outputs",
+      "valid": null
     }
   ],
   "repository_checks": "passed in GitHub Actions",
@@ -47,5 +51,14 @@
       "conclusion": "success",
       "successful_jobs": 6
     }
-  ]
+  ],
+  "pending_roots": [
+    "08-input-vars-local-outputs"
+  ],
+  "mock_tests": {
+    "path": "08-input-vars-local-outputs",
+    "expected_runs": 4,
+    "status": "pending GitHub Actions",
+    "live_aws_calls": false
+  }
 }

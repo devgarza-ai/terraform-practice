@@ -4,7 +4,7 @@
 
 [![Terraform checks](https://github.com/devgarza-ai/terraform-practice/actions/workflows/terraform-checks.yml/badge.svg)](https://github.com/devgarza-ai/terraform-practice/actions/workflows/terraform-checks.yml)
 
-A documented collection of Terraform course exercises covering AWS networking, S3, remote state, EC2 bootstrapping, static website hosting, and data-source lookups. Each runnable exercise is an independent Terraform root with a focused learning objective and its own provider lock file.
+A documented collection of Terraform course exercises covering AWS networking, S3, remote state, EC2 bootstrapping, static website hosting, data-source lookups, and input variables. Each runnable exercise is an independent Terraform root with a focused learning objective and its own provider lock file.
 
 [Exercise guide](#exercise-guide) · [Workflow](docs/workflow.md) · [Verification](docs/verification.md) · [Review notes](docs/review-notes.md) · [Attribution](ATTRIBUTION.md)
 
@@ -19,12 +19,13 @@ A documented collection of Terraform course exercises covering AWS networking, S
 | **05 · EC2 and NGINX** | A public web-server lab, shared tags, security rules, and bootstrapping | [Open exercise](05-ec2-nginx/README.md) |
 | **06 · S3 static website** | Bucket policy, website documents, HTML uploads, and change detection | [Open exercise](06-s3-static-website/README.md) |
 | **07 · AWS data sources** | Regional AMI discovery, account/Region/AZ context, tagged VPC lookup, and policy JSON generation | [Open exercise](07-data-sources/README.md) |
+| **08 · Input variables** | Typed inputs, defaults, resource references, validation, and mocked plan tests | [Open exercise](08-input-vars-local-outputs/README.md) |
 
 ## How the repository is organized
 
 Each numbered folder has one purpose. Run Terraform from the exercise folder you intend to manage. The top-level directory is a repository index, not a deployable root.
 
-The HCL reference keeps its `.tf.example` extension because its external bucket and child module were placeholders in the supplied exercise. All six runnable roots are checked by the validation workflow.
+The HCL reference keeps its `.tf.example` extension because its external bucket and child module were placeholders in the supplied exercise. All seven runnable roots are checked by the validation workflow.
 
 ## Work locally
 
@@ -51,7 +52,7 @@ These are course-based practice exercises. The separate [Resilient AWS CloudOps 
 
 ## Automation
 
-The [Terraform checks workflow](.github/workflows/terraform-checks.yml) runs repository checks, formatting checks, backend-free initialization, and validation. It uses read-only repository permissions and does not request AWS credentials. The workflow's action versions are pinned to reviewed commits.
+The [Terraform checks workflow](.github/workflows/terraform-checks.yml) runs repository checks, formatting checks, backend-free initialization, and validation, plus mocked input-variable plan tests. It uses read-only repository permissions and does not request AWS credentials. The workflow's action versions are pinned to reviewed commits.
 
 ## Repository guide
 

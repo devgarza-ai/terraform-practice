@@ -1,6 +1,6 @@
 # Source Map
 
-The explicit upload batches supply nineteen source files. Filenames with numeric suffixes are normalized within the appropriate exercise folder. Their source hashes identify the supplied bytes before repository formatting and the documented edits.
+The explicit upload batches supply twenty-two source files. Filenames with numeric suffixes are normalized within the appropriate exercise folder. Their source hashes identify the supplied bytes before repository formatting and the documented edits.
 
 | Uploaded file | Repository destination / treatment | Original SHA-256 |
 | --- | --- | --- |
@@ -23,6 +23,9 @@ The explicit upload batches supply nineteen source files. Filenames with numeric
 | `error.html` | 06-s3-static-website/build/error.html | `4c0cf3a8ca52de86672bb10c69f418836762503d211cbb49121ab63a8ae97095` |
 | `provider(3).tf` | 07-data-sources/providers.tf | `6250a0d2059eab77eadc9c44e297026cf2be22748244860c77a142172c7ada3d` |
 | `compute(2).tf` | 07-data-sources/data.tf, compute.tf, s3.tf, and outputs.tf; scoped policy and reusable-lab changes documented | `a27f83fd4e472d73eff51b488a4fc7d2211effed36bd7b0bd0c4b835079439e0` |
+| `provider(4).tf` | 08-input-vars-local-outputs/providers.tf | `1255e70523b67758212c7250c24d843a6f2fb25cdb015f0ef9be7f7c4cfb7d29` |
+| `compute(3).tf` | 08-input-vars-local-outputs/compute.tf | `f30f1de98ef2579e940a63a09169b28261b0dc70d2b443d180fa789c502f6a6e` |
+| `variables.tf` | 08-input-vars-local-outputs/variables.tf; contains arguments and instance-type literals corrected | `7c5fc20a7d9bd867d273b53290dfd3da39823bc91f92ea268b977d8b0ecfc18e` |
 
 The HCL overview and first runnable S3 project remain separate: one demonstrates block syntax with unresolved placeholders, while the other creates a randomly named bucket. The provider snapshot that repeats the first-S3 resources was consolidated instead of publishing duplicate resource definitions.
 

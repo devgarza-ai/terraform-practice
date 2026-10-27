@@ -13,12 +13,13 @@ This ledger distinguishes what the supplied material establishes from what repos
 | EC2 and NGINX | Supplied source and a completed learner checklist covering deployment and destruction | The supplied recording independently verifies the networking portion, not a successful HTTP response for this maintained snapshot |
 | S3 static website | Supplied source and HTML; learner explicitly confirmed the website worked and the resources were destroyed | The maintenance edits were not deployed again during repository preparation |
 | AWS data sources | Learner supplied AMI/context/AZ/VPC lookups, generated policy JSON, and EC2/S3 resource declarations as course practice | No apply, live-resource, policy-attachment, or teardown transcript was supplied for this snapshot |
+| Input variables | Learner supplied three Terraform files and reported smooth input-variable testing | Uploaded validation typo corrected for publication; no live runtime transcript supplied; maintenance tests use a mocked provider |
 
 The network recording shows `Apply complete! Resources: 3 added, 0 changed, 0 destroyed` for the internet gateway, public route table, and subnet association. The console recording shows matching routing and association information. Raw console recordings are not published here because they include account identifiers; a public demonstration requires a separate sanitized edit.
 
 ## Configuration checks
 
-[validation-results.json](validation-results.json) records successful configuration checks for all six runnable roots and their exact checked commit. Formatting uses Terraform 1.17.0. Provider lock files record selected versions, verified archive checksums, and the canonical Linux package hash. Schema results come from GitHub Actions; local checks cover formatting and repository publication inputs.
+[validation-results.json](validation-results.json) records configuration checks and their evidence for seven runnable roots and their exact checked commit. Formatting uses Terraform 1.17.0. Provider lock files record selected versions, verified archive checksums, and the canonical Linux package hash. Schema results come from GitHub Actions; local checks cover formatting and repository publication inputs.
 
 The checks cover:
 
@@ -37,4 +38,4 @@ The workflow uses read-only repository permissions, immutable action references,
 
 ## What remains separately verifiable
 
-AMI identity and availability, effective AWS permissions, backend security and locking behavior, application readiness, successful teardown, and final billing require their own runtime evidence. No AWS plan, apply, or destroy is performed by this repository's validation workflow.
+AMI identity and availability, effective AWS permissions, backend security and locking behavior, application readiness, successful teardown, and final billing require their own runtime evidence. No live AWS plan, apply, or destroy is performed by this repository's validation workflow. Exercise 08 adds four plan-based tests using a mocked AWS provider; its result is pending the first expanded workflow run.

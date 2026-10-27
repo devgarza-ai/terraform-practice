@@ -48,6 +48,13 @@
       "title": "AWS data sources",
       "runnable": true,
       "focus": "Regional AMI discovery, caller/Region/AZ context, existing VPC lookup, generated policy JSON"
+    },
+    {
+      "id": "08",
+      "path": "08-input-vars-local-outputs",
+      "title": "Input variables",
+      "runnable": true,
+      "focus": "Typed inputs, defaults, resource references, custom instance validation, mocked plan tests"
     }
   ]
 }

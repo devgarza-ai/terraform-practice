@@ -16,6 +16,9 @@
 | AWS execution context | Exercise 07 | Inspect the caller, Region, and available AZs without hardcoding their returned values |
 | Policy document generation | Exercise 07 | Separate generating JSON from attaching a policy and granting permissions |
 | Lifecycle and drift | Course role-play discussion | Explain configuration ownership and selective `ignore_changes`; no separate drift lab is claimed here |
+| Input declarations and assignments | Exercise 08 | Distinguish a variable declaration, its assigned/default value, and its `var` reference |
+| Types and validation | Exercise 08 | Explain how a type constraint differs from a custom allowed-value condition |
+| Mocked configuration tests | Exercise 08 | Verify intended variable behavior without treating a mock plan as an AWS deployment |
 
 ## Explain the work clearly
 

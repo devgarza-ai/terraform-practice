@@ -26,6 +26,9 @@ The repository begins with the learner-supplied course files. The following main
 | Generated policy scope | Replace the all-buckets object ARN with a reference to this exercise's bucket objects | Keep the example document scoped; the JSON remains unattached and does not grant access |
 | Data-source EC2 baseline | Add root-volume encryption, required IMDSv2, and identifying tags | Match the reusable baseline used in the earlier EC2 lab; no new AWS runtime result is claimed |
 | Data-source comments | Correct the claim that the bucket is read from AWS and clarify the independent VPC lookup | The bucket is a managed resource, and reading a VPC does not place the EC2 instance in it |
+| Input-variable validation | Correct `contains` to receive the allowed list and candidate as separate arguments; use `t2.micro` and `t3.micro` literals | The uploaded snapshot used comma typos and an invalid list/variable expression; learner-reported successful tests remain a separate record |
+| Input-variable provider lock | Keep the supplied AWS `~> 6.0` constraint and select the existing 6.4.0 practice baseline | Make initialization repeatable without changing the learner’s provider-major requirement |
+| Input-variable tests | Add four mocked plan runs for defaults, supported overrides, unsupported values, and the comma typo | Verify the corrected guardrail without AWS credentials, API calls, or deployment |
 
 ## Material boundaries
 
