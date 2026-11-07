@@ -4,7 +4,7 @@
 
 [![Terraform checks](https://github.com/devgarza-ai/terraform-practice/actions/workflows/terraform-checks.yml/badge.svg)](https://github.com/devgarza-ai/terraform-practice/actions/workflows/terraform-checks.yml)
 
-A documented collection of Terraform course exercises covering AWS networking, S3, remote state, EC2 bootstrapping, static website hosting, data-source lookups, and input variables. Each runnable exercise is an independent Terraform root with a focused learning objective and its own provider lock file.
+A documented collection of Terraform course exercises and applied AWS projects covering networking, S3, remote state, EC2 bootstrapping, website delivery, data-source lookups, and input variables. Each runnable exercise is an independent Terraform root with a focused learning objective and its own provider lock file.
 
 [Exercise guide](#exercise-guide) · [Workflow](docs/workflow.md) · [Verification](docs/verification.md) · [Review notes](docs/review-notes.md) · [Attribution](ATTRIBUTION.md)
 
@@ -20,6 +20,14 @@ A documented collection of Terraform course exercises covering AWS networking, S
 | **06 · S3 static website** | Bucket policy, website documents, HTML uploads, and change detection | [Open exercise](06-s3-static-website/README.md) |
 | **07 · AWS data sources** | Regional AMI discovery, account/Region/AZ context, tagged VPC lookup, and policy JSON generation | [Open exercise](07-data-sources/README.md) |
 | **08 · Input variables** | Typed inputs, defaults, resource references, validation, and mocked plan tests | [Open exercise](08-input-vars-local-outputs/README.md) |
+
+## Applied projects
+
+| Project | What I built | Evidence |
+| --- | --- | --- |
+| **[Pestech preview](projects/pestech-preview/README.md)** | A temporary business-site preview using EC2/Nginx, private S3 releases, scoped IAM, SSM deployment, and CloudFront HTTPS | [Architecture image](projects/pestech-preview/docs/Pestech_Preview_AWS_Architecture.svg) · [Verified deployment](projects/pestech-preview/docs/verification.md) |
+
+Pestech was deployed and checked on November 6, 2026, including a final Terraform plan with no changes. Its exact WSL Terraform source is awaiting upload; the project page states which files and evidence are currently published.
 
 ## How the repository is organized
 
@@ -68,6 +76,6 @@ The [Terraform checks workflow](.github/workflows/terraform-checks.yml) runs rep
 
 ## Ownership
 
-Ivan Garza typed and adapted the course exercises while learning Terraform. Repository organization, documentation, validation automation, and the maintenance changes described in the review notes were prepared with AI assistance. Demonstrated outcomes are distinguished from planned work and professional employment experience.
+Ivan Garza typed and adapted the course exercises while learning Terraform, and manually typed the Pestech preview configuration during guided practice. Repository organization, documentation, validation automation, website assets, the preview deployment helper, and the maintenance changes described in the review notes were prepared with AI assistance. Demonstrated outcomes are distinguished from planned work and professional employment experience.
 
 [GitHub](https://github.com/devgarza-ai) · [LinkedIn](https://www.linkedin.com/in/ivan-garza-cloud/)

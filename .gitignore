@@ -28,3 +28,9 @@ __pycache__/
 .DS_Store
 
 # Commit each root's .terraform.lock.hcl: it records provider selections.
+
+# Pestech runtime releases and local deployment receipts
+projects/pestech-preview/pestech-site.tar.gz
+projects/pestech-preview/pestech-deploy-receipt.json
+projects/pestech-preview/*-plan.txt
+projects/pestech-preview/preview-plan*.txt

@@ -9,6 +9,10 @@ This repository publishes the learner-supplied exercise files with organization,
 
 Repository preparation and validation automation were developed with AI assistance. The [source map](docs/source-map.md) identifies the supplied material, and the [verification ledger](docs/verification.md) distinguishes observations, learner reports, and configuration-only checks.
 
+## Applied project: Pestech preview
+
+The [Pestech preview](projects/pestech-preview/README.md) is a separate guided applied project for a temporary family-business website review. Ivan Garza reports manually typing its Terraform configuration in WSL, then applying it and verifying the live result. Its supplied deployment evidence is recorded separately from course exercise checks. Website assets, the Python SSM helper, architecture artwork, and project documentation were prepared with AI assistance. The exact WSL Terraform source is awaiting upload; no reconstructed files are presented as that source.
+
 ## Technical references
 
 - [Terraform core workflow](https://developer.hashicorp.com/terraform/intro/core-workflow)
