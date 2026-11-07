@@ -26,6 +26,7 @@ __pycache__/
 *.pyc
 .venv/
 .DS_Store
+*Zone.Identifier
 
 # Commit each root's .terraform.lock.hcl: it records provider selections.
 

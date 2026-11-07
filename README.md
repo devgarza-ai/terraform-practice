@@ -25,15 +25,15 @@ A documented collection of Terraform course exercises and applied AWS projects c
 
 | Project | What I built | Evidence |
 | --- | --- | --- |
-| **[Pestech preview](projects/pestech-preview/README.md)** | A temporary business-site preview using EC2/Nginx, private S3 releases, scoped IAM, SSM deployment, and CloudFront HTTPS | [Architecture image](projects/pestech-preview/docs/Pestech_Preview_AWS_Architecture.svg) · [Verified deployment](projects/pestech-preview/docs/verification.md) |
+| **[Pestech preview](projects/pestech-preview/README.md)** | A temporary business-site preview using EC2/Nginx, private S3 releases, scoped IAM, SSM deployment, and CloudFront HTTPS | [Architecture image](projects/pestech-preview/docs/Pestech_AWS_Architecture_Desktop.svg) · [Verified deployment](projects/pestech-preview/docs/verification.md) |
 
-Pestech was deployed and checked on November 6, 2026, including a final Terraform plan with no changes. Its exact WSL Terraform source is awaiting upload; the project page states which files and evidence are currently published.
+Pestech was deployed and checked on November 6, 2026, including a final Terraform plan with no changes. The learner-uploaded Terraform source and provider lock file are published with formatting-only normalization. The project page records deployment evidence and the separately supplied website artifact.
 
 ## How the repository is organized
 
 Each numbered folder has one purpose. Run Terraform from the exercise folder you intend to manage. The top-level directory is a repository index, not a deployable root.
 
-The HCL reference keeps its `.tf.example` extension because its external bucket and child module were placeholders in the supplied exercise. All seven runnable roots are checked by the validation workflow.
+The HCL reference keeps its `.tf.example` extension because its external bucket and child module were placeholders in the supplied exercise. The validation workflow checks all seven runnable course exercises and the separate Pestech project. Pestech uses Terraform 1.17.1 to match its supplied version constraint; the existing course checks retain 1.17.0.
 
 ## Work locally
 

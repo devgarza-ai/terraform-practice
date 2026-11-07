@@ -1,0 +1,54 @@
+{
+  "source": "Learner-uploaded working Terraform configuration",
+  "normalization": "Canonical filenames; Terraform formatting and final-newline normalization only; resource attribute values and original provider lock bytes preserved.",
+  "files": [
+    {
+      "path": "cloudfront.tf",
+      "uploaded_sha256": "f70a7f62aa6642cf904368d62e46575b95b61a68a749c298521590f927afdb98",
+      "published_sha256": "1e3659537e27d7e1ee540ebdf863f0f59bb8578c869ddc94264195c4cda63109",
+      "changes": "Terraform formatting and final-newline normalization only"
+    },
+    {
+      "path": "networking.tf",
+      "uploaded_sha256": "826e1277f61e28d9ff16c94ddc1302098719d120bf0d7a478882c6268860ccaf",
+      "published_sha256": "36d321bc5a54c9133012865e8ef4a3a3bbdf08d22998859db1d43a3d291f5cb9",
+      "changes": "Terraform formatting and final-newline normalization only"
+    },
+    {
+      "path": "assets.tf",
+      "uploaded_sha256": "e775aee51d71f479f7267b5fda8ac9634c9c28a1c047e4b77ee9eca894a028af",
+      "published_sha256": "0fe9d3282ef49febfc4b613e22eec800d827e2c2c9ff03ca6247d2ac6ad4501c",
+      "changes": "Terraform formatting and final-newline normalization only"
+    },
+    {
+      "path": "providers.tf",
+      "uploaded_sha256": "9c79d4a14f020c2bb2178368da814367052495fd842714eefd21070484204ba3",
+      "published_sha256": "9c79d4a14f020c2bb2178368da814367052495fd842714eefd21070484204ba3",
+      "changes": "none"
+    },
+    {
+      "path": "compute.tf",
+      "uploaded_sha256": "afbeb6e1da040388be1e35daf8a1c984c8a5b62d98079aa5efd3d0748d7a9a84",
+      "published_sha256": "a81c28e5a7c89a77ff84dacf9486ce2fcc39ff7c4a73d4a3f02f92ade38b91dc",
+      "changes": "Terraform formatting and final-newline normalization only"
+    },
+    {
+      "path": "iam.tf",
+      "uploaded_sha256": "78d443426a2d2cc1f4f5b6b5f5545db8a58b35ebaf28ba50551a21966d987940",
+      "published_sha256": "b44f871c2b7d7ace55fcabc4bda407762bd5830724fc484747f72f44cd82fbed",
+      "changes": "Terraform formatting and final-newline normalization only"
+    },
+    {
+      "path": "security.tf",
+      "uploaded_sha256": "629423cdf905dbdf7feaf6589fc4c0363d7265745b58ac6e0ff97a503c9cbd75",
+      "published_sha256": "629423cdf905dbdf7feaf6589fc4c0363d7265745b58ac6e0ff97a503c9cbd75",
+      "changes": "none"
+    },
+    {
+      "path": ".terraform.lock.hcl",
+      "uploaded_sha256": "297a4f22294741ac91c2959e0ca9da0bc24753a45074c73459964fddf1cbfefc",
+      "published_sha256": "297a4f22294741ac91c2959e0ca9da0bc24753a45074c73459964fddf1cbfefc",
+      "changes": "none"
+    }
+  ]
+}

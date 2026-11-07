@@ -1,10 +1,12 @@
 # Architecture Notes
 
-![Deployed Pestech preview architecture](Pestech_Preview_AWS_Architecture.svg)
+![Deployed Pestech preview architecture](Pestech_AWS_Architecture_Desktop.svg)
 
-[Save the architecture SVG](Pestech_Preview_AWS_Architecture.svg)
+[Desktop layout](Pestech_AWS_Architecture_Desktop.svg) · [Mobile layout](Pestech_AWS_Architecture_Mobile.svg)
 
 The diagram describes the preview deployed and verified on November 6, 2026, Pacific time. It includes the actual delivery and deployment paths, plus the network and application boundaries established by the supplied configuration, execution plans, terminal evidence, HTTP checks, and phone screenshot.
+
+The dark desktop layout shows the full topology. The separate portrait layout uses a condensed flow and larger text for phone viewing; it was inspected at a 390-pixel display width. Both layouts describe the same deployed preview.
 
 ## Website delivery
 

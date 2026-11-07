@@ -10,6 +10,7 @@ import sys
 ROOT=Path(__file__).resolve().parents[1]
 errors=[]
 manifest=json.loads((ROOT/'docs/exercises.json').read_text())['exercises']
+manifest+=json.loads((ROOT/'docs/projects.json').read_text())['projects']
 for exercise in manifest:
     folder=ROOT/exercise['path']
     if not (folder/'README.md').is_file():
@@ -34,7 +35,7 @@ secret_patterns=[
 for relative in files:
     path=ROOT/relative
     name=relative.name
-    if '.terraform' in relative.parts or name.endswith(('.tfstate','.tfplan','.pem','.key')) or '.tfstate.' in name or name in {'.env','tfplan'} or (name.startswith('.env.') and name != '.env.example'):
+    if '.terraform' in relative.parts or name.endswith(('.tfstate','.tfplan','.pem','.key')) or '.tfstate.' in name or name.endswith('Zone.Identifier') or name in {'.env','tfplan'} or (name.startswith('.env.') and name != '.env.example'):
         errors.append(f'Generated or sensitive file is tracked: {relative}')
     if name.endswith(('.tfvars','.tfvars.json','.tfbackend')):
         errors.append(f'Local environment configuration is tracked: {relative}')

@@ -1,0 +1,12 @@
+{
+  "projects": [
+    {
+      "id": "pestech-preview",
+      "path": "projects/pestech-preview",
+      "title": "Pestech AWS preview",
+      "runnable": true,
+      "terraform_version": "1.17.1",
+      "focus": "EC2/Nginx, VPC routing, scoped IAM, private S3 release artifacts, SSM deployment, CloudFront HTTPS"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "checked_date_pacific": "2026-11-06",
+  "terraform_version": "1.17.1",
+  "aws_provider_version": "6.72.0",
+  "format_check": "passed",
+  "backend_free_initialization": "passed with supplied lock in readonly mode",
+  "bootstrap_shell_syntax": "passed",
+  "source_resource_values": "preserved; HCL token comparison passed",
+  "provider_lock": "identical to learner upload",
+  "provider_package_integrity": "unpacked official package h1 matches supplied lock",
+  "aws_resources_created_or_changed": false,
+  "artifact_input": "Ephemeral empty archive for configuration validation only; never deployed",
+  "schema_validation_execution": "GitHub Actions Terraform checks; review the workflow run for the exact published commit."
+}

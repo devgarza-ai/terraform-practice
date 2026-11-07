@@ -2,7 +2,9 @@
 
 ## Current working copy
 
-The existing infrastructure is managed from the learner's WSL directory `~/terraform/pestech-preview`. Keep its original state/backend in place. This publication currently contains documentation, the uploaded bootstrap, and the deployment helper; the remaining typed Terraform source and provider lock file are pending upload. Do not treat this partial folder as a new deployment root.
+The existing infrastructure is managed from the learner's WSL directory `~/terraform/pestech-preview`. Keep its original state/backend in place when operating that deployment. This publication includes the uploaded Terraform root and original provider lock file. A fresh clone has no state for the existing resources and must not be applied as if it owned that deployment.
+
+Use Terraform 1.17.1 and the supplied AWS provider 6.72.0 lock. Obtain the approved website archive separately before planning a deployment; `assets.tf` evaluates its SHA-256. CI's empty validation fixture is not a deployable website archive.
 
 ## Release update workflow
 
@@ -28,7 +30,7 @@ Expected proof includes `PESTECH_DEPLOY_OK` and `Deployment verified on EC2.` Ch
 
 ## Bootstrap and deployment responsibilities
 
-`user-data.sh` installs and configures Nginx and enables SSM Agent. The successful later deployment also establishes that AWS CLI was present on the instance; the uploaded bootstrap does not itself install that CLI. A clean rebuild must include the corresponding CLI preparation before the helper's remote `aws s3 cp` step. Exact rebuild instructions will be reconciled against the complete WSL source rather than inferred from an older plan.
+`user-data.sh` installs and configures Nginx and enables SSM Agent. The successful later deployment also establishes that AWS CLI was present on the instance; the uploaded bootstrap does not itself install that CLI. The helper checks for `aws` and `python3` before downloading the bundle. Verify these prerequisites on a newly built instance and install AWS CLI through its official method if it is absent. The uploaded bootstrap is preserved rather than silently extended during portfolio publication.
 
 ## End of the preview
 

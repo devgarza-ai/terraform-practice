@@ -11,7 +11,7 @@ Repository preparation and validation automation were developed with AI assistan
 
 ## Applied project: Pestech preview
 
-The [Pestech preview](projects/pestech-preview/README.md) is a separate guided applied project for a temporary family-business website review. Ivan Garza reports manually typing its Terraform configuration in WSL, then applying it and verifying the live result. Its supplied deployment evidence is recorded separately from course exercise checks. Website assets, the Python SSM helper, architecture artwork, and project documentation were prepared with AI assistance. The exact WSL Terraform source is awaiting upload; no reconstructed files are presented as that source.
+The [Pestech preview](projects/pestech-preview/README.md) is a separate guided applied project for a temporary family-business website review. Ivan Garza manually typed its Terraform configuration in WSL, then applied it and verified the live result. Its supplied deployment evidence is recorded separately from course exercise checks. Website assets, the Python SSM helper, architecture artwork, and project documentation were prepared with AI assistance. The learner-uploaded Terraform source is published with canonical filenames and formatting-only normalization; resource attribute values and the original provider lock bytes are preserved in the import record.
 
 ## Technical references
 
