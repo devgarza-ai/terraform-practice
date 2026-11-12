@@ -1,6 +1,6 @@
 # Terraform Practice · AWS Foundations
 
-**Ivan Garza · AWS Certified Cloud Practitioner · [devgarza-ai](https://github.com/devgarza-ai)**
+**Ivan Garza · AWS Certified Cloud Practitioner (CLF-C02) · [devgarza-ai](https://github.com/devgarza-ai)**
 
 [![Terraform checks](https://github.com/devgarza-ai/terraform-practice/actions/workflows/terraform-checks.yml/badge.svg)](https://github.com/devgarza-ai/terraform-practice/actions/workflows/terraform-checks.yml)
 
