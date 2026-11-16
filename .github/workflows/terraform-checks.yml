@@ -23,11 +23,36 @@ jobs:
     timeout-minutes: 5
     steps:
       - name: Check out repository
+        id: checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
       - name: Check structure, links, and publication inputs
+        id: repository_checks
         run: python3 scripts/check_repository.py
+      - name: Write repository results summary
+        if: ${{ always() }}
+        working-directory: ${{ runner.temp }}
+        env:
+          CHECK_RESULTS: ${{ toJSON(steps) }}
+        run: |
+          python3 - <<'PY'
+          import json
+          import os
+
+          results = json.loads(os.environ['CHECK_RESULTS'])
+          checks = [
+              ('Check out repository', 'checkout'),
+              ('Structure, links, and publication inputs', 'repository_checks'),
+          ]
+          lines = ['### Repository checks', '', '| Check | Result |', '| --- | --- |']
+          for label, step_id in checks:
+              outcome = results.get(step_id, {}).get('outcome', 'skipped')
+              lines.append(f'| {label} | {outcome} |')
+          lines.extend(['', 'Results apply to the published repository files. This workflow does not deploy AWS resources.'])
+          with open(os.environ['GITHUB_STEP_SUMMARY'], 'a', encoding='utf-8') as summary:
+              summary.write('\n'.join(lines) + '\n')
+          PY
 
   terraform:
     name: Validate ${{ matrix.exercise }}
@@ -53,23 +78,71 @@ jobs:
         working-directory: ${{ matrix.exercise }}
     steps:
       - name: Check out repository
+        id: checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
       - name: Set up Terraform
+        id: terraform_setup
         uses: hashicorp/setup-terraform@dfe3c3f87815947d99a8997f908cb6525fc44e9e # v4.0.1
         with:
           terraform_version: ${{ matrix.terraform_version || '1.17.0' }}
           terraform_wrapper: false
       - name: Create an archive fixture for configuration validation only
+        id: archive_fixture
         if: matrix.exercise == 'projects/pestech-preview'
         run: tar -czf pestech-site.tar.gz --files-from /dev/null
       - name: Check formatting
+        id: format
         run: terraform fmt -check -diff -recursive
       - name: Initialize without the backend
+        id: initialize
         run: terraform init -backend=false -input=false -lockfile=readonly
       - name: Validate configuration
+        id: validate
         run: terraform validate -no-color
       - name: Test input-variable behavior without AWS
+        id: variable_tests
         if: matrix.exercise == '08-input-vars-local-outputs'
         run: terraform test -no-color
+      - name: Write Terraform results summary
+        if: ${{ always() }}
+        working-directory: ${{ runner.temp }}
+        env:
+          CHECK_RESULTS: ${{ toJSON(steps) }}
+          TF_ROOT: ${{ matrix.exercise }}
+          TF_VERSION: ${{ matrix.terraform_version || '1.17.0' }}
+        run: |
+          python3 - <<'PY'
+          import json
+          import os
+
+          results = json.loads(os.environ['CHECK_RESULTS'])
+          checks = [
+              ('Check out repository', 'checkout'),
+              ('Set up Terraform', 'terraform_setup'),
+              ('Preview archive fixture', 'archive_fixture'),
+              ('Formatting', 'format'),
+              ('Initialize without the backend', 'initialize'),
+              ('Configuration validation', 'validate'),
+              ('Mocked input-variable tests', 'variable_tests'),
+          ]
+          lines = [
+              f"### Terraform checks: `{os.environ['TF_ROOT']}`",
+              '',
+              f"Requested Terraform version: `{os.environ['TF_VERSION']}`.",
+              '',
+              '| Check | Result |',
+              '| --- | --- |',
+          ]
+          for label, step_id in checks:
+              outcome = results.get(step_id, {}).get('outcome', 'skipped')
+              lines.append(f'| {label} | {outcome} |')
+          lines.extend([
+              '',
+              'Archive fixtures and mocked tests run only for their designated folders; skipped is expected elsewhere.',
+              'No Terraform apply is run. Open a failed step above to read its error log.',
+          ])
+          with open(os.environ['GITHUB_STEP_SUMMARY'], 'a', encoding='utf-8') as summary:
+              summary.write('\n'.join(lines) + '\n')
+          PY
