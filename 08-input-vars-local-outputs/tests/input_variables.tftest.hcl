@@ -1,6 +1,6 @@
 # Repository-maintenance tests: mocked plans, no AWS credentials or API calls.
 mock_provider "aws" {
-  override_during = "plan"
+  override_during = plan
 
   override_data {
     target = data.aws_ami.ubuntu_east_1
